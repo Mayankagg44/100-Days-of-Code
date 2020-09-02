@@ -1,0 +1,13 @@
+num1=int(input("Enter no 1: ")) #Inputting 1st number
+num2=int(input("Enter no 2: ")) #Inputting 2nd number 
+num3=int(input("Enter no 3: ")) #Inputting 3rd number
+product=0
+if num1!=7 and num2!=7 and num3!=7:
+    product=num1*num3*num2
+elif num1==7:
+    product=num2*num3
+elif num2==7 :
+    product=num3
+elif num3==7 :
+    product= -1
+print(product)
