@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include<conio.h>
+int main (){
+    char s[]="Mayank"; //Your string
+    char *ptr= s; //ptr is a pointer which stores the address of our string
+    while (*ptr!='\0')
+    {
+        printf("%c",*ptr);
+        *ptr++;
+    }
+return 0;    
+}
