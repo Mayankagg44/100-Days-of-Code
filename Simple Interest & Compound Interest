@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+int main ()
+{
+float amount,principle,rate,time,simple_interest,comp_interest;
+
+// Input principle, rate and time 
+printf("Enter Your Principle Amount:\n");
+scanf("%f",&principle);
+printf("Enter Rate of Interest: \n");
+scanf("%f",&rate);
+printf("Enter Time Period(in years): \n");
+scanf("%f",&time);
+
+// Calculate simple interest 
+simple_interest=(principle*rate*time)/100;
+// Calculate compound interest
+comp_interest=principle*pow((1+rate/100),time)-principle;
+
+// Print the resultant value of SI and CI
+printf("Your Simple Interest is %f\n",simple_interest);
+printf("Your Compound Interest is %.2f\n",comp_interest);  //github.com/Mayankagg44/
+
+// Print the Total resultant value
+printf("Total Amount to be paid with Simple Interest is %.2f\n",principle+simple_interest);
+printf("Total Amount to be paid with Compound Interest is %.2f\n",principle+comp_interest);
+
+getch();
+}
