@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{   int n;
+printf("Enter number : ");
+scanf("%d",&n);
+printf("\n");
+printf("Increasing table order of no. %d is:\n",n);
+    for(int i=1;i<=10;i++)
+    {   
+        printf("\n%d X %d is: %d\n",n,i,n*i); //It will print the table of no. in Increasing order
+    }
+
+    printf("\n*********************************************************************\n");
+    printf("\n*********************************************************************\n");
+printf("Decreasing table order of no. %d is:\n",n);
+
+    for(int i=10;i>=1;i--)
+    {   
+        printf("\n%d X %d is: %d\n",n,i,n*i); //It will print the table of no. in Decreasing order
+    }
+    
+    return 0;
+}
