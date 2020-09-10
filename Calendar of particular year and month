@@ -1,0 +1,9 @@
+import calendar
+year=2020  
+month=9
+
+#To ask month and year from the user
+#year=int(input("Enter year: "))
+#month=int(imput("Enter month: "))
+
+print(calendar.month(year,month))
