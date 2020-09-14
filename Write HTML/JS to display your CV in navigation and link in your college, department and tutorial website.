@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Resume</title>
+<style>
+table, th, td {
+border: 1px solid black;
+}
+</style>
+</head>
+<body>
+<center>	
+<h1><u>RESUME</u></h1>
+</center>
+<p style="font-size:16px">
+<b>NAME :</b> ABC<br>
+<b>ADDRESS :</b> XYZ Colony, Delhi - 1100XX <br>
+<b>EMAIL :</b> ABC@gmail.com<br>
+<b>PHONE No. :</b> 9XXXXXXXXX<br>
+</p>
+<hr>
+<h1>Objective :</h1> Write HTML/JS to display your CV in navigation and link in your college, department and tutorial website.
+<h1>Educational Qualification :</h1>
+<table style="width:100%">
+<tr>
+    <th>Course/Degree</th>
+    <th>Institution/College</th>
+    <th>Board/University</th>
+    <th>CGPA/Percentage</th>
+</tr>
+<tr>
+     <td>10th</td>
+     <td>DPS</td>
+     <td>CBSE</td>
+     <td>9.8</td>
+</tr>
+<tr>
+     <td>12th</td>
+     <td>DPS</td>
+     <td>CBSE</td>
+     <td>88%</td>
+</tr>
+<tr>
+     <td>12th</td>
+     <td>MNO College</td>
+     <td>AKTU</td>
+     <td>85%</td>
+</tr>
+</table>
+<h1>Technical Skills: </h1>
+ <ul>
+	<li><b>Language Skills: </b>
+  <ol>
+	<li>C</li>
+	<li>C++</li>
+  <li>Java</li>
+	<li>Python</li>
+	</ol>
+	</li>
+ </ul>
+ <ul>
+	<li><b>Web Technology: </b>
+  <ol>
+	<li>HTML</li>
+	<li>CSS</li>
+  <li>JavaScript</li>
+  </ol>
+  </li>
+ </ul>
+<h1>Academic Project: </h1>
+<ul>
+<li><b>WEBSITE: </b>
+   <ol>
+	<li><b>Topic: </b> Web development website</li>
+	<li><b>Details: </b> Dynamic website that lets user create, maintain and host his/her own website according to their job profiles in an affordable way.</li>
+   </ol>
+	</li>
+ </ul>
+<h1>Internships: </h1>
+<ul>
+	<li>Web Development</li>
+	<li>AI</li>
+  <li>Machine Learning</li>
+	</ul>
+<h1>Personal Details: </h1>
+<b>NAME: </b> ABC <br>
+<b>ADDRESS: </b> MNO Colony, Delhi - 1100XX <br>
+<b>EMAIL: </b> ABC@gmail.com<br>
+<b>PHONE NO.: </b> 9XXXXXXXXX
+<h1>Useful Links: </h1>
+<ahref="https://www.google.com/">College Website Link</a>
+<br>
+<ahref="https://www.google.com/">Deptartment Link</a>
+<br>
+<ahref="https://www.coursera.org/">Tutorial website</a>
+<pre style="font-size:20px">
+<b>Date: 14/09/2020                                                                                           Signature:</b>
+</pre>
+</body>
+</html>
