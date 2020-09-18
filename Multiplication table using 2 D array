@@ -1,0 +1,54 @@
+#include<stdio.h>
+#include<conio.h>
+void printTable(int *mulTable,int num,int n){
+   // printf("The multiplication table of %d is: \n",num);
+    for(int i=0;i<n;i++){    
+    mulTable[i]=num*(i+1);
+    }
+
+    for(int i=0;i<n;i++){
+        printf("%dX%d = %d\n",num,i+1,mulTable[i]);
+    }
+printf("************************************************\n");
+}
+
+int main()
+{   int mulTable[3][10];   // A 2-D array
+
+//We can also do the comment part written below 
+
+/*for (int i = 0; i < 10; i++)
+    {
+        mulTable[0][i]=2*(i+1);
+    }
+for (int i = 0; i <10; i++)
+    {   
+        printf("2X%d = %d\n",i+1,mulTable[0][i]);
+    }
+printf("******************************************************\n");
+for (int i = 0; i < 10; i++)
+    {
+        mulTable[0][i]=7*(i+1);
+    }
+for (int i = 0; i <10; i++)
+    {   
+        printf("7X%d = %d\n",i+1,mulTable[0][i]);
+    }
+printf("******************************************************\n");
+
+for (int i = 0; i < 10; i++)
+    {
+        mulTable[0][i]=9*(i+1);
+    }
+for (int i = 0; i <10; i++)
+    {   
+        printf("9X%d = %d\n",i+1,mulTable[0][i]);
+    }
+*/
+
+printTable(mulTable[0],2,10); //Change the value ( i.e. 2) that you want to print table for
+printTable(mulTable[1],7,10); //Change the value ( i.e. 7) that you want to print table for
+printTable(mulTable[2],9,10); //Change the value ( i.e. 10) that you want to print table for
+
+return 0;
+}
