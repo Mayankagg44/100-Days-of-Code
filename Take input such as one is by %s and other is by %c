@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char st1[50],st2[50],c;
+    int i=0;
+    printf("Enter the string 1: ");
+    scanf("%s",st1);
+    printf("Enter your 2 string character by character: ");
+    while (c!='\n')
+    {
+        fflush(stdin); // It is used to flush the output buffer of a stream i.e. to prevent the scanf to take the next input character every time
+        scanf("%c",&c); //Takes input character by character
+        st2[i]=c;
+        i++;
+    }
+    st2[i-1]='\0';
+    printf("Your 1st string is: %s\n",st1);
+    printf("Your 2nd string is: %s\n",st2);                       
+    printf("By comparing both strings...The result is : %d\n",strcmp(st1,st2));  //If the reult is 0 then both the strings are same/equal
+
+    return 0;
+}
