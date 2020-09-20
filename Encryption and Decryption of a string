@@ -1,0 +1,29 @@
+#include<stdio.h>
+
+void encrypt(char *ch){
+    char *ptr=ch;
+    while (*ptr!='\0')
+    {   
+        *ptr=*ptr+1;  //It will take the very next ASCII value
+        ptr++;
+    }
+}
+
+void decrypt(char *ch){
+    char *ptr=ch;
+    while (*ptr!='\0')
+    {   
+        *ptr=*ptr-1;  
+        ptr++;
+    }
+}
+
+int main(){
+    char c[]="Mayank is a coder...";
+    printf("Original string is: %s\n",c);
+    encrypt(c);
+    printf("Encrypted string is: %s\n",c);
+    decrypt(c);
+    printf("Decrypted string is: %s\n",c);
+    return 0;
+}
