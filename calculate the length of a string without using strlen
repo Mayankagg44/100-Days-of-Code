@@ -1,0 +1,23 @@
+// WAP to calculate the length of a string without using strlen
+#include<stdio.h>
+
+int strlen(char *str){    //Here str is a pointer to character
+    char *ptr=str;
+    int len=0;
+    while (*ptr!='\0')
+    {
+        len++;
+        ptr++;
+    }
+
+return len;
+
+}
+
+int main(){
+    char str[]="Mayank";
+    int l;
+    l=strlen(str);
+    printf("The length of string is : %d",l);
+return 0;
+}
