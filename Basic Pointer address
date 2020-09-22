@@ -1,0 +1,13 @@
+#include<stdio.h>
+
+int Print_address(int a){
+    printf("The address of variable a is: %u\n", &a);
+}
+
+int main(){
+    int i=5;
+    printf("The value of variable i is: %d\n", i);
+    Print_address(i);            //We write this program to check whether the addresses of both variable 'i' and 'a' are same or not
+    printf("The address of variable i is: %u\n", &i);   //%u is used for printing the address 
+    return 0;
+}
