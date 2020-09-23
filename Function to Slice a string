@@ -1,0 +1,19 @@
+//WAF slice() to Slice a string.
+#include<stdio.h>
+
+void slice(char *ptr,int m,int n){
+	int i=0;
+	while ((i+m)<n)
+	{
+		ptr[i] = ptr[i+m];          //Here the original string will be sliced 
+		i++;
+	}
+	ptr[i]='\0';
+}
+
+int main(){
+	char str[]="Mayank_the_coder";
+	slice(str,0,7);                   //Change the values for differnt result
+	printf("The Sliced string is : %s",str);     //Sliced string will be printed
+	return 0;
+}
