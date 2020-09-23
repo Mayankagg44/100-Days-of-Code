@@ -1,0 +1,20 @@
+def convert(from_currency,amount): 
+    if from_currency == 'EUR' :
+        total = amount*0.01417
+        return total
+    elif from_country=='AUS':
+        total=amount*0.02140
+        return total
+    elif from_country=='CANADA':
+        total=amount*0.02027
+        return total
+    elif from_country=='BRI':
+        total=amount*0.0100
+        return total
+    else:
+        print("-1")
+        return total
+
+from_country = input("From Country: ") 
+amount = int(input("Amount: ")) 
+print(convert(from_country,amount))
