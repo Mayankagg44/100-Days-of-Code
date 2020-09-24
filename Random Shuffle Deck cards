@@ -1,0 +1,6 @@
+import itertools,random
+deck=list(itertools.product(range(1,14),['Spade','Heart','Diamond','Club']))            #Make a deck of cards
+random.shuffle(deck)        #Shuffle the cards
+print("You got: ")
+for i in range(5):              #Draw five cards
+    print(deck[i][0],"of",deck[i][1])
