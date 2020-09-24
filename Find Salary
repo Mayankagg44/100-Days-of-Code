@@ -1,0 +1,20 @@
+'''An organization has decided to provide salary hike to its employees based on their job level. Employees can be in job levels 3 , 4 or 5.
+
+In case of invalid job level, consider hike percentage to be 0.
+
+Given the current salary and job level, write a python program to find and display the new salary of an employee. Identify the test data and use it to test the program.'''
+
+
+def find_new_sal(cur_salary,job_lv):
+    if job_lv == 3:
+        new_sal = cur_salary + (cur_salary*0.15)
+    elif job_lv == 4:
+        new_sal = cur_salary + (cur_salary*0.07)
+    elif job_lv == 5:
+        new_sal = current_salary + (cur_salary*0.05)
+    else:
+        return cur_salary
+    return new_sal
+
+new_sal=find_new_sal(100000,4)
+print("\n",new_sal)
