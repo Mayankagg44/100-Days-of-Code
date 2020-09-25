@@ -1,0 +1,2 @@
+from playsound import playsound
+playsound('D:\\Programs\\Ghamand Kar Song.mp3')         //You have to paste your MP3 video path & use '\\' double Backslash key after every change in path
