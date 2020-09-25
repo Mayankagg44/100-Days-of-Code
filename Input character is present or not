@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+    char str[100],c;
+    int i,lenf=0,len;
+    printf("Enter the string : ");
+    gets(str);           //You can use scanf also
+    len=strlen(str);
+    printf("Enter a character to find its position : ");
+    scanf("%c",&c);
+    for(i=0;i<len;i++)
+    {
+        if(str[i]==c){
+            printf("Character found at position :  %d\n",i+1);
+            lenf=1;
+        }
+    }
+    if(lenf==0){
+        printf("\nCharacter not found");
+    }
+}
