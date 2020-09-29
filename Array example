@@ -1,0 +1,11 @@
+arr=[]          #Creating an array
+
+arr.append(1)
+arr.append(3)
+arr.append(5)
+
+print("Elements of an Array : "+str(arr))
+arr[0]=2        #Change the value of array[0]
+print("Elements of an Array after changes : "+str(arr))
+
+print("First Element of an Array : "+str(arr[0]))
