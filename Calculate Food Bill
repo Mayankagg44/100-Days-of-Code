@@ -1,0 +1,32 @@
+'''Foodcorner home delivers vegetarian and non-vegetarian combos to its customer based on order.A vegetarian combo costs Rs.120 per plate and a non-vegetarian combo costs Rs.150 per plate. 
+Their non-veg combo is really famous that they get more orders for their non-vegetarian combo than the vegetarian combo.
+Apart from the cost per plate of food, customers are also charged for home delivery based on the distance in kms from the restaurant to the delivery point. 
+The delivery charges are as mentioned below: distance in kms delivery charge in rs per km for first 3kms 0 for next 3kms 3 for the remaining 6 given the type of food, quantity (no. Of plates) and the distance in kms from the restaurant to the delivery point.
+Write a python program to calculate the final bill amount to be paid by a customer. The below information must be used to check the validity of the data provided by the customer: type of food must be v' for vegetarian and n' for non-vegetarian. 
+Distance in kms must be greater than 0. Quantity ordered should be minimum 1. If any of the input is invalid, the bill amount should be considered as -1.
+'''
+
+def calculate_amount(f,quan,dist):
+   amount=0
+   if((f=="V" or f=="N")and quan>0):  
+       if(f=="V"):
+           f=120*quan
+       elif(f=="N"):
+           f=150*quan
+       else:
+           f=0    
+       if(dist>=0) :
+           if(0<dist<=3):
+               amount=(0*dist)+f
+           elif(3<dist<=6):
+               amount=(3*(dist-3))+f
+           else:
+               amount=((6*(dist-6))+9)+f
+       else:
+           amount=-1
+   else:
+       amount=-1
+   return amount
+
+amount=calculate_amount("V",4,2)            # Change the values for different OUTPUT
+print("Your total bill is: ",amount)
