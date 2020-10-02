@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<string.h>
+struct employee
+{
+    int code;
+    char name[10];
+    float salary;
+};
+void show(struct employee emp)
+{
+    printf("The name is:%s \n",emp.name);
+    printf("The code is:%d \n",emp.code);
+    printf("The salary is:%f \n",emp.salary);
+};
+
+int main(){
+    struct employee e;
+    struct employee *ptr;
+    ptr =  &e;
+    ptr->code=100;
+    strcpy(ptr->name,"Mayank");
+    ptr->salary=243.234;
+    
+    //printf("%d",(*ptr).code);
+    show(e);
+
+    return 0;
+}
