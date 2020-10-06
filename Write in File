@@ -1,0 +1,13 @@
+#include<stdio.h>
+
+
+int main(){
+    FILE *fptr;
+    int number=34;
+
+    fptr=fopen("generated.txt","w");              //This will generate a text file and wrie what's written in fprintf()
+    fprintf(fptr,"The number is: %d",number);
+    fclose(fptr);
+
+    return 0;
+}
