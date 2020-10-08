@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+int main(){
+    FILE *ptr;
+    ptr=fopen("putc&getc.txt","r");               //Write something in the text file
+    char c=fgetc(ptr);
+     printf("The value of my character is: %c\n",c);
+    // printf("The value of my character is: %c\n",c);            // This line will always print the first character letter
+
+     printf("The value of my character is: %c\n",fgetc(ptr));       //For inputing next values we will use fgetc to get next character
+     printf("The value of my character is: %c\n",fgetc(ptr));
+     printf("The value of my character is: %c\n",fgetc(ptr));
+     printf("The value of my character is: %c\n",fgetc(ptr));
+
+    ptr=fopen("putcfile.txt","w");
+    putc('M',ptr);                      //putc() and fputc() are both same.
+    fputc('a',ptr);
+    fputc('y',ptr);
+    fputc('a',ptr);
+    fputc('n',ptr);
+    fputc('k',ptr);
+    return 0;
+}
