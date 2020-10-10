@@ -1,0 +1,18 @@
+#include<stdio.h>
+
+int main(){
+    FILE *ptr;
+    int num;
+    
+    printf("Enter the no. you want the table of: ");
+    scanf("%d",&num);
+    
+    ptr=fopen("table.txt","w");               //It'll generates table.txt 
+    for(int i=0;i<10;i++){
+        fprintf(ptr,"%d X %d = %d\n",num,i+1,num*(i+1));
+    }
+    
+    fclose(ptr);
+    printf("Number %d table has successfully created.",num);
+    return 0;
+}
