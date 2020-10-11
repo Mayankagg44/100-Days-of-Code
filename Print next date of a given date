@@ -1,0 +1,46 @@
+#Write a Python program to get next date of a given date.
+
+def leap_year(year):
+	return ((year%400 == 0)or((year%100 !=0)and(year%4 ==0)))
+
+def last_day(month,year):
+	if month ==2:
+		if(leap_year(year)):
+			ld=29
+		else:
+			ld=28
+	elif month in (4,6,9,11):
+		ld=30
+	else:
+		ld=31
+	return ld
+
+def nextDate(day,month,year):
+	if day==31 and month == 12:
+		day=1
+		month=1
+		year+=1
+	elif day == last_day(month,year):
+		day=1
+		month +=1
+	elif day >=1 and day < last_day(month,year):
+		day +=1
+	else :
+		print('Impossible date')
+		exit()
+	return [str(day),str(month),str(year)]
+
+day=int(input('Enter day: '))
+if day<1 or day>31:
+	print('Invalid input.')
+	exit()
+month=int(input('Enter month: '))
+if month<1 or month>12:
+	print('Invalid input.')
+	exit()
+year=int(input('Enter year: '))
+if year<1800 or year>2120:
+	print('Invalid input.')
+	exit()
+date=(nextDate(day,month,year))
+print('-'.join(date))
