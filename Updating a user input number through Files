@@ -1,0 +1,12 @@
+#include<stdio.h>
+
+int main(){
+    FILE *ptr;
+    int num;
+    printf("Enter the no. you want : ");
+    scanf("%d",&num);
+    ptr=fopen("updatenumber.txt","w"); 
+    fprintf(ptr,"The number has been changed to = %d\n",2*num);         //Here the number will be updated by 2 times, change the last part for different output
+    fclose(ptr);
+    return 0;
+}
