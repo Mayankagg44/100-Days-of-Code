@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main(){
+    FILE *ptr;
+    int emp_num1,emp_num2;
+    char emp_s1[12],emp_s2[15];       //Create many you want
+
+    printf("Enter the 1st salary :");
+    scanf("%d",&emp_num1);
+    
+    printf("Enter the 2nd salary :");
+    scanf("%d",&emp_num2);
+    
+    printf("Enter the 1st name :");
+    scanf("%s",emp_s1);
+    
+    printf("Enter the 2nd name :");
+    scanf("%s",emp_s2);
+    
+    ptr=fopen("name.txt","w");
+    fprintf(ptr,"%s,%d\n",emp_s1,emp_num1);
+    fprintf(ptr,"%s,%d\n",emp_s2,emp_num2);
+    
+    fclose(ptr);
+    return 0;
+}
