@@ -1,0 +1,32 @@
+//Sort array in Descending order...
+#include<stdio.h>
+
+int main(){
+    int num,temp,i,j;
+    printf("Enter no. of elements : ");
+    scanf("%d",&num);
+    int a[num];
+    printf("Enter the %d numbers : ",num);
+    for ( i = 0; i < num; i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for (i = 0; i < num; i++)
+    {
+        for (j = i+1; j <num ; j++)
+        {
+            if (a[i]<a[j])
+            {
+                temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+        }
+    }
+    printf("Descending order of those %d numbers are : ",num);
+    for ( i = 0; i < num; i++)
+    {
+        printf("%d\n",a[i]);
+    }   
+    return 0;
+}
