@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+    int *ptr;                           //If you want to input the size then initalize the number and replace it with the declared number i.e int n; -> Use scanf() -> then replace 5 with 'n'
+    
+    ptr = (int *)calloc(5 , sizeof(int) );    //In here calloc is creating 5 int type elements
+    
+    for (int i = 0; i < 5; i++)                 //If I commented this for loop then all the printf values in the next loop would return 0
+    {
+        printf("Enter the %d element : \n",i+1);
+        scanf("%d",&ptr[i]);
+    }
+    
+    for (int i = 0; i < 5; i++)
+    {
+        printf("The  value of %d element is : %d\n",i+1,ptr[i]);
+    }
+    free(ptr);
+    return 0;
+}
