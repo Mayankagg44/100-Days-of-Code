@@ -1,0 +1,6 @@
+#include<stdio.h>
+
+int main(){
+    printf("\nThe length of the string is : %d\n",printf("This is my Code.."));
+    return 0;
+}
