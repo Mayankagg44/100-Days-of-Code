@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main()
+{
+    int temp, n, x, rev = 0;
+    printf("Enter a number : ");
+    scanf("%d", &n);
+    temp = n;
+    while (n > 0)
+    {
+        x = n % 10;
+        rev = rev * 10 + x;
+        n = n / 10;
+    }
+    if (temp == rev)
+    {
+        printf("Given number %d is a Palindrome", rev);
+    }
+    else
+    {
+        printf("Given number %d is not a Palindrome", rev);
+    }
+    return 0;
+}
