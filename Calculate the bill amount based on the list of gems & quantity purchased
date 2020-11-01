@@ -1,0 +1,25 @@
+'''Write a Python program to calculate the bill amount to be paid by a customer based on the list of gems and quantity purchased. If any gem required by the customer is not available in the store, then consider the total bill amount to be -1.'''
+
+
+def calculate(gems_list, price_list, req_gems, req_quantity):
+    bill_amount = 0
+    j = 0
+    for i in req_gems:
+        if i in gems_list:
+            index = gems_list.index(i)
+            bill_amount = bill_amount+req_quantity[j]*price_list[index]
+            j = j+1
+        else:
+            bill_amount = -1
+            break
+    if(bill_amount > 30000):
+        bill_amount = bill_amount-(bill_amount*5/100)
+    return bill_amount
+
+
+gems_list = ['A', 'B', 'C', 'D', 'E']
+price_list = [10000, 20000, 45000, 100000, 150000]
+req_gems = ["A", "B", "C"]
+req_quantity = [1, 7, 8]
+bill_amount = calculate(gems_list, price_list, req_gems, req_quantity)
+print("Total amount to be paid is:", bill_amount)
