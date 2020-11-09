@@ -1,0 +1,30 @@
+#include<stdio.h> 
+int main() {
+    int n,i,j,a[100],isSorted=1,isRepeated=0,is1toN=1;  
+    printf("Enter number of elements in array\n"); 
+    scanf("%d",&n); 
+    printf("Enter %d Elements in array\n",n);  
+    for(i=0;i<n;i++) { 
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)  {
+        for(j=i+1;j<n;j++) { 
+            if(a[i]==a[j]) {  
+                isRepeated=1;    
+                break;    
+            }   
+        } 
+        if(a[i]<a[i+1] && isSorted==1)   
+            isSorted=1;   
+        else   
+            isSorted=0;   
+        if(a[i]<1)  
+            is1toN=0; 
+    } 
+    if(isRepeated==1 || isSorted==1 || is1toN==0) { 
+        printf("Array is not Beautiful\n");  
+    }  
+    else {
+        printf("Array is Beautiful\n");  
+    }     
+}
