@@ -1,0 +1,46 @@
+#include <stdio.h>
+int main()
+{
+    int i, n, searchno, low, mid, high, flag = 0;
+    printf("Enter size of array: ");
+    scanf("%d", &n);
+    int a[n - 1];
+    printf("Enter the numbers: ");
+    for (i = 0; i < n; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+    printf("Enter the element to be searched: ");
+    scanf("%d", &searchno);
+    low = 1;
+    high = n;
+    do
+    {
+        mid = (high + low) / 2;
+        if (searchno < a[mid])
+        {
+            high = mid - 1;
+            flag = 0;
+        }
+        else if (searchno > a[mid])
+        {
+            low = mid + 1;
+            flag = 0;
+        }
+        else
+        {
+            flag = 1;
+            break;
+        }
+
+    } while (searchno != a[mid] && low <= high);
+    if (flag == 1)
+    {
+        printf("Number has been found successful\n");
+    }
+    else
+    {
+        printf("Number has not been found successful\n");
+    }
+    return 0;
+}
