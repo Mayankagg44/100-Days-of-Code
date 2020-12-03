@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main()
+{
+    char str[81];
+    int nletter, ndigit, nspace, nother, i;
+    printf("Enter a line of text: ");
+    gets(str);
+    nletter = ndigit = nspace = nother = i = 0;
+    while (str[i] != '\0')
+    {
+        char ch = str[i];
+        if (ch >= 'A' && ch <= 'Z' || ch >= 'a' && ch <= 'z')
+            nletter++;
+        else if (ch >= '0' && ch <= '9')
+            ndigit++;
+        else if (ch == ' ' || ch == '\n' || ch == '\t')
+            nspace++;
+        else
+            nother++;
+        i++;
+    }
+    printf("Letters: %d \nWhite spaces : %d\n", nletter, nspace);
+    printf(" Digits : %d \nSpecial characters : %d\n", ndigit, nother);
+    return 0;
+}
