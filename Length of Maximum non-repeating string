@@ -1,0 +1,2 @@
+string=input("Enter the string: ")
+print("The length of maximum non-repeating string is: ",len(set(string))) 
